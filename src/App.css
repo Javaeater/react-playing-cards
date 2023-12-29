@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+/* General and Misc. Styling */
+body {
+  background-image: url("../public/Table.jpg");
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Rockwell", sans-serif;
+    color: gold;
+    text-shadow: 10px 5px 15px #3E442E;
+}
+
+.cardCount {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Rockwell", serif;
+    color: gold;
+    text-shadow: 5px 5px 7px #3E442E;
+}
+
+/* Styling for buttons */
+.button {
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 1px 1px 5px #000000;
+    border: 2px solid black;
+
+}
+.button.dealButton {
+    background-image: linear-gradient(to right, #eeaeca 0%, #94bbe9 100%);
+}
+
+.dealButton:hover {
+    background-image: linear-gradient(to right, #f6a385 0%, #fda065 51%, #f6a345 100%);
+}
+
+.button.deckResetButton {
+    background-image: linear-gradient(to right, #fdbb2d 0%, #22c1c3 100%);
+}
+
+.deckResetButton:hover {
+    background-image: linear-gradient(to right, #f6a385 0%, #fda065 51%, #f6a345 100%);
+}
+
+/* Styling for cards */
+.playingCard {
+  width: 200px;
+  height: 300px;
+}
+
+.cardFace {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    backface-visibility: hidden;
+}
+
+.cardFace.back {
+    transform: rotateY(-180deg);
+    background-color: #FFD433;
+    background-size: 200px 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: white solid 10px;
+    border-radius: 10px;
+    background-image: url("../public/Transcend-Logo.png");
+}
+
+.cardFace.front {
+    border-radius: 10px;
+    background-color: white;
+}
+
+.playingCard:hover .cardFace.front {
+    transition: all 1s ease;
+    transform: rotateY(180deg);
+}
+
+.playingCard:hover .cardFace.back {
+    transition: all 1s ease;
+    transform: rotateY(0deg);
+}
+
+.cardFrontTop {
+  width: 200px;
+  height: 50px;
+}
+
+.cardFrontCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 150px;
+}
+
+.cardFrontBottom {
+  transform: rotate(180deg);
+}
+
